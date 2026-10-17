@@ -1,0 +1,4 @@
+site_name: Wellhead Documentation
+
+nav:
+  - Wellhead Installation Procedure: wellhead-procedure.md
