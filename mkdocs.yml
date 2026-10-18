@@ -4,3 +4,4 @@ nav:
   - Home: index.md
   - Wellhead Documentation: Guide.md
   - Guide: Guide2.md
+  - API Reference: api-guide.md
