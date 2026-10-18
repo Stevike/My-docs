@@ -8,6 +8,7 @@ All requests to the Wellhead API must include a valid Bearer token in the HTTP h
 ```bash
 curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha-10" \
      -H "Authorization: Bearer YOUR_API_KEY"
+     ```
 
 Endpoint Reference
 Get Live Sensor Telemetry
@@ -23,6 +24,7 @@ rig_id,string,Yes,"The unique identifier of the drilling rig (e.g., Rig-Alpha-10
 
 #### Example Success Response (`200 OK`)
 
+json
 {
   "timestamp": "2026-10-18T02:00:00Z",
   "pressure_psi": 9850.5,
