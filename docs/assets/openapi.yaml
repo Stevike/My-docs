@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: Wellhead Telemetry & Sensor API
+  version: 1.0.0
+  description: |
+    REST API for real-time monitoring of pressure, temperature, and valve status 
+    across multi-bowl wellhead assemblies.
+servers:
+  - url: https://api.wellhead-docs.com/v1
+paths:
+  /sensors/telemetry:
+    get:
+      summary: Retrieve live sensor metrics
+      description: Returns real-time pressure and temperature telemetry for all active downhole sensors.
+      parameters:
+        - name: rig_id
+          in: query
+          required: true
+          description: The unique identifier of the drilling rig.
+          schema:
+            type: string
+            example: "Rig-Alpha-10"
+      responses:
+        '200':
+          description: Successful response with live metric arrays.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  timestamp:
+                    type: string
+                    example: "2026-10-18T02:00:00Z"
+                  pressure_psi:
+                    type: number
+                    example: 9850.5
+                  temperature_f:
+                    type: number
+                    example: 185.2
+                  status:
+                    type: string
+                    example: "OPTIMAL"
+        '401':
+          description: Unauthorized - Invalid or missing API bearer token.
