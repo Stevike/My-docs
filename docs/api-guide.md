@@ -38,6 +38,7 @@ curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha
   "temperature_f": 185.2,
   "status": "OPTIMAL"
 }
+```
 
 
 ## Rate Limits & Errors
