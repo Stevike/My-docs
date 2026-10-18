@@ -38,25 +38,3 @@ Error Codes:
 401 Unauthorized: Invalid or missing API bearer token.
 
 429 Too Many Requests: Rate limit exceeded.
-
-
----
-
-### Step 2: Save, Commit, and Push
-
-<Steps>
-  <Step subtitle="10 sec" title="Save the file">
-    Press `Ctrl + S` to save `api-guide.md`.
-  </Step>
-
-  <Step subtitle="30 sec" title="Run git commands">
-    Run these commands in your VS Code terminal:
-    ```bash
-    git add .
-    git commit -m "Clean up markdown formatting for api guide"
-    git push origin main
-    ```
-  </Step>
-</Steps>
-
-Once GitHub Actions finishes building, do a hard refresh (`Ctrl + F5`) on your browser tab, and your page will display beautifully with clean tables, styled code blocks, and proper headings!
