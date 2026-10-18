@@ -8,6 +8,7 @@ All requests to the Wellhead API must include a valid Bearer token in the HTTP h
 ```
 bash
 curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha-10" \
+    
      -H "Authorization: Bearer YOUR_API_KEY"
 ```
 
