@@ -5,11 +5,10 @@ Welcome to the developer portal for the **Wellhead Telemetry System**. This guid
 ## Authentication
 All requests to the Wellhead API must include a valid Bearer token in the HTTP header:
 
-'''bash
-curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha-10"
-
--H "Authorization: Bearer YOUR_API_KEY"
-,,,
+```bash
+curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha-10" \
+     -H "Authorization: Bearer YOUR_API_KEY"
+```
 
 ## Interactive Endpoint Reference
 You can test and inspect our core endpoints below:
