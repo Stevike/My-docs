@@ -6,11 +6,13 @@ Welcome to the developer portal for the **Wellhead Telemetry System**. This guid
 
 All requests to the Wellhead API must include a valid Bearer token in the HTTP header:
 
+
 ```bash
 curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha-10" 
 
 -H "Authorization: Bearer YOUR_API_KEY"
 ```
+
 
 ## Endpoint Reference
 
@@ -29,11 +31,12 @@ curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha
 #### Example Success Response (`200 OK`)
 
 json
+
 {
-"timestamp": "2026-10-18T02:00:00Z",
-"pressure_psi": 9850.5,
-"temperature_f": 185.2,
-"status": "OPTIMAL"
+  "timestamp": "2026-10-18T02:00:00Z",
+  "pressure_psi": 9850.5,
+  "temperature_f": 185.2,
+  "status": "OPTIMAL"
 }
 
 ## Rate Limits & Errors
