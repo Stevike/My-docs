@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Wellhead Documentation
+
 nav:
-  - Home: index.md
-  - Guide: Guide.md
+  - Wellhead Installation Procedure: wellhead-procedure.md
