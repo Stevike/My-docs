@@ -1,0 +1,30 @@
+openapi: 3.0.3
+info:
+  title: Wellhead Management API
+  version: 1.0.0
+  description: API for monitoring and managing oil and gas wellhead sensors.
+servers:
+  - url: https://api.wellhead-docs.com/v1
+paths:
+  /wells:
+    get:
+      summary: Retrieve a list of all active wells
+      responses:
+        '200':
+          description: A JSON array of well objects
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                      example: 102
+                    name:
+                      type: string
+                      example: "Alpha-1 Rig"
+                    status:
+                      type: string
+                      example: "Active"
