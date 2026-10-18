@@ -30,14 +30,15 @@ curl -X GET "https://api.wellhead-docs.com/v1/sensors/telemetry?rig_id=Rig-Alpha
 
 #### Example Success Response (`200 OK`)
 
-json
 
+```json
 {
   "timestamp": "2026-10-18T02:00:00Z",
   "pressure_psi": 9850.5,
   "temperature_f": 185.2,
   "status": "OPTIMAL"
 }
+
 
 ## Rate Limits & Errors
 
