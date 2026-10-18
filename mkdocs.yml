@@ -1,4 +1,6 @@
+site_name: My Docs
+
 nav:
   - Home: index.md
   - Guide: Guide.md
-  - Guide2: Guide2.md
+  - Guide: Guide2.md
