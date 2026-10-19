@@ -1,0 +1,21 @@
+
+/* Improve readability of API documentation tables */
+.md-typeset table:not([class]) {
+  width: 100%;
+  table-layout: auto;
+  display: table;
+}
+
+.md-typeset table:not([class]) th,
+.md-typeset table:not([class]) td {
+  padding: 0.65rem 0.8rem;
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+/* Give the description column more room */
+.md-typeset table:not([class]) th:last-child,
+.md-typeset table:not([class]) td:last-child {
+  min-width: 240px;
+}

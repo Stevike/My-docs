@@ -5,3 +5,6 @@ nav:
   - Wellhead Documentation: Guide.md
   - Technical Guide: Guide2.md
   - API Reference: api-guide.md
+
+extra_css:
+  - styles/extra.css
