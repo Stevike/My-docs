@@ -3,5 +3,5 @@ site_name: Ikechukwu Okonkwo | Technical Documentation
 nav:
   - Home: index.md
   - Wellhead Documentation: Guide.md
-  - Guide: Guide2.md
+  - Technical Guide: Guide2.md
   - API Reference: api-guide.md
