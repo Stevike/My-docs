@@ -46,9 +46,11 @@ curl --request GET \
 
 ### 3.2 Query Parameters
 
+
 | Parameter | Details |
 |---|---|
-| `rig_id` | **Type:** string<br>**Required:** Yes<br>**Description:** Identifier of the rig whose telemetry is requested, for example, `Rig-Alpha-10`. |
+| `rig_id` | String; required. Identifier of the rig whose telemetry is requested, for example, `Rig-Alpha-10`. |
+
 
 The accepted parameter format and validation rules must be confirmed against the API implementation.
 
