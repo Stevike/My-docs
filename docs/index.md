@@ -13,7 +13,7 @@ I use this portfolio to demonstrate how I organize complex technical information
 
 A structured example covering installation preparation, tools and equipment, safety considerations, installation steps, testing, troubleshooting, and documentation sign-off.
 
-[Explore Wellhead Documentation](guide/)
+[Explore Wellhead Documentation](Guide/)
 
 ### API Reference
 
