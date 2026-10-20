@@ -1,39 +1,101 @@
+
 # Ikechukwu Okonkwo
-## Engineering & Technical Documentation Portfolio
 
-Welcome to my technical documentation portfolio.
+## Technical Writer | Engineering Documentation | API Documentation
 
-I am an engineering professional with experience in oil and gas equipment, wellhead systems, instrumentation, safety barriers, installation procedures, testing, and commissioning.
+I create clear, structured, and maintainable technical documentation that helps readers understand equipment, systems, procedures, and software interfaces.
 
-I use this portfolio to demonstrate how I organize complex technical information into clear, structured documentation for technical and non-technical audiences.
+With a professional background in oil and gas engineering and wellhead services, I bring practical technical knowledge to documentation involving equipment operation, installation, testing, commissioning, troubleshooting, and safety systems.
 
-## Featured Documentation
+I am building my technical writing portfolio around documentation-as-code, structured content, and API documentation, with an interest in remote opportunities where technical accuracy, clarity, and organization matter.
+
+[Explore My Documentation](Guide.md){ .md-button .md-button--primary }
+[View API Reference](api-guide.md){ .md-button }
+
+---
+
+## Featured Projects
 
 ### Wellhead Installation Documentation
 
-A structured example covering installation preparation, tools and equipment, safety considerations, installation steps, testing, troubleshooting, and documentation sign-off.
+A technical documentation sample demonstrating how complex engineering activities can be organized into a clear, structured guide.
 
-[Explore Wellhead Documentation](Guide/)
+**Topics covered:**
+- Installation preparation and equipment requirements
+- Safety considerations and work planning
+- Installation steps and verification
+- Testing, troubleshooting, and documentation sign-off
+
+[Read the Wellhead Documentation](Guide.md)
 
 ### API Reference
 
-A demonstration API documentation project covering authentication, endpoint descriptions, request parameters, JSON responses, and error handling.
+An illustrative API documentation project demonstrating how developers can understand endpoints, authentication concepts, request parameters, JSON responses, and error handling.
 
-[Explore API Reference](api-guide/)
+**Documentation features:**
+- Endpoint descriptions and request examples
+- Parameters and response structures
+- Authentication concepts
+- Error responses and troubleshooting guidance
 
-## Documentation Skills
+[Read the API Reference](api-guide.md)
+
+### Technical Guide
+
+A technical writing sample focused on presenting engineering information in an organized and accessible format.
+
+[Explore the Technical Guide](Guide2.md)
+
+---
+
+## Technical Writing Skills
 
 - Technical procedures and work instructions
 - Equipment and system documentation
-- Troubleshooting and technical reporting
-- Markdown and structured content
-- MkDocs documentation websites
+- Installation, testing, and commissioning documentation
+- Troubleshooting guides and technical reports
+- API reference documentation and JSON examples
+- Markdown and documentation structure
+- MkDocs and Material for MkDocs
 - GitHub and version-controlled documentation
+- Documentation-as-code workflows
 
-## Current Learning
+## Tools and Technologies
 
-I am developing my skills in documentation-as-code workflows and API documentation while building practical portfolio examples using Markdown, MkDocs, and GitHub.
+| Tool | Application |
+|---|---|
+| Markdown | Structured technical content |
+| MkDocs | Documentation site generation |
+| Material for MkDocs | Documentation website presentation |
+| GitHub | Version control and source hosting |
+| GitHub Actions | Automated documentation build and deployment |
+| OpenAPI / YAML | API specification examples |
+
+## How I Approach Documentation
+
+1. **Understand the audience** — identify the reader, their task, and the information they need.
+2. **Organize the content** — structure information with consistent headings, terminology, tables, and examples.
+3. **Write clearly** — make technical concepts easier to understand without losing important detail.
+4. **Verify the content** — check links, formatting, examples, and consistency against available source information.
+5. **Maintain the documentation** — use version control and repeatable publishing workflows where appropriate.
+
+## Professional Background
+
+My engineering experience in oil and gas provides context for documenting wellhead equipment, instrumentation, safety systems, installation activities, testing, and commissioning.
+
+I apply this experience to technical communication while continuing to develop my software documentation and API writing skills.
+
+## Contact and Portfolio
+
+- **Portfolio:** [stevike.github.io/My-docs](https://stevike.github.io/My-docs/)
+- **GitHub:** [github.com/Stevike/My-docs](https://github.com/Stevike/My-docs)
+- **LinkedIn:** [Ikechukwu Okonkwo](https://www.linkedin.com/in/ikechukwu-okonkwo-a5a643185)
+- **Email:** stevikepet@yahoo.com
+
+I welcome opportunities to contribute to technical writing, engineering documentation, API documentation, and documentation-as-code projects.
+
+---
 
 ## Important Notice
 
-Portfolio examples are provided for demonstration and learning purposes. Safety-critical engineering procedures and illustrative API specifications must be verified against approved technical sources before operational use.
+Portfolio examples are provided for demonstration and learning purposes. The API examples are illustrative and do not represent a verified live service. Engineering procedures and safety-critical information must be checked against approved technical documentation and applicable work procedures before operational use.
