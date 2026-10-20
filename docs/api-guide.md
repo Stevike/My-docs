@@ -1,123 +1,199 @@
 
-# Wellhead Telemetry API Guide
+# Wellhead Telemetry API Reference
 
-> **Portfolio demonstration:** This guide describes an illustrative API. The server address, credentials, and sensor readings are examples and are not confirmed to represent a live service.
+This reference documents an illustrative REST API for retrieving wellhead telemetry data. It demonstrates API documentation practices for endpoint definitions, authentication, request parameters, JSON responses, error handling, and rate limits.
+
+!!! warning "Demonstration API"
+    This is a portfolio example, not a verified or deployed API. The base URL, credentials, responses, rate limits, and endpoint behaviour are illustrative. Requests will not retrieve live well data. Do not use these examples for operational or safety-critical decisions.
 
 ## 1. Overview
 
-The Wellhead Telemetry API is a demonstration interface for retrieving pressure and temperature measurements associated with a drilling rig.
+The example API represents a service that provides telemetry readings associated with a wellhead monitoring system.
 
-This guide explains authentication, endpoint usage, query parameters, example responses, rate limits, and error handling.
+### Intended audience
 
-## 2. Authentication
+- Software developers integrating telemetry data into an application
+- Technical teams reviewing a monitoring API
+- Engineers and documentation specialists evaluating the example interface
 
-Requests must include a valid Bearer token in the `Authorization` HTTP header.
+### Example capabilities
 
-Example header:
+- Request telemetry for a specified rig
+- Review pressure and temperature readings
+- Inspect the reported telemetry status
+- Handle invalid requests and authentication errors
+
+## 2. Base URL
+
+The reserved `.invalid` domain below is used to prevent the example from being mistaken for a live service.
+
+```text
+https://api.example.invalid
+```
+
+| Property | Description |
+|---|---|
+| API style | REST |
+| Data format | JSON |
+| Example API version | v1 |
+| Authentication model | Bearer token |
+| Transport | HTTPS in the illustrative design |
+
+## 3. Authentication
+
+The example uses a Bearer token in the HTTP `Authorization` header.
 
 ```http
-Authorization: Bearer YOUR_API_KEY
+Authorization: Bearer YOUR_EXAMPLE_TOKEN
 ```
 
-Replace `YOUR_API_KEY` with a valid token issued by the API provider. Never publish real API credentials in documentation or source control.
+`YOUR_EXAMPLE_TOKEN` is a placeholder, not a working credential. No token issuance or validation service is provided by this portfolio example.
 
-## 3. Endpoint Reference
+### Authentication requirements
 
-### Get Live Sensor Telemetry
+- Include the token in the `Authorization` header.
+- Do not place credentials in query parameters.
+- Avoid committing real credentials to source control.
+- A real implementation should use an approved token provisioning and rotation process.
 
-Retrieves a telemetry record for the specified rig.
+An unauthenticated or invalidly authenticated request is illustrated as returning `401 Unauthorized`.
 
-| Property | Value |
-|---|---|
-| HTTP Method | `GET` |
-| Endpoint | `/v1/sensors/telemetry` |
-| Authentication | Bearer token |
-| Required Parameter | `rig_id` |
+## 4. Retrieve telemetry
 
-### 3.1 Example Request
+Returns an illustrative telemetry record for the requested rig.
 
-The hostname below is a placeholder. Replace it with the actual API base URL before making a real request.
+### `GET /v1/sensors/telemetry`
+
+### Request parameters
+
+| Parameter | Location | Type | Required | Description |
+|---|---|---|---|---|
+| `rig_id` | Query | String | Yes | Identifier of the rig whose telemetry is requested |
+
+### Example request
 
 ```bash
-curl --request GET \
-  "https://api.example.com/v1/sensors/telemetry?rig_id=Rig-Alpha-10" \
-  --header "Authorization: Bearer YOUR_API_KEY"
+curl --get "https://api.example.invalid/v1/sensors/telemetry" \
+  --header "Authorization: Bearer YOUR_EXAMPLE_TOKEN" \
+  --header "Accept: application/json" \
+  --data-urlencode "rig_id=RIG-001"
 ```
 
-### 3.2 Query Parameters
+This command illustrates the request format only. The reserved host does not provide a live API service.
 
-| Parameter | Details |
-|---|---|
-| `rig_id` | **Type:** string<br>**Required:** Yes<br>**Description:** Identifier of the rig whose telemetry is requested, for example, `Rig-Alpha-10`. |
+### Example successful response
 
-The accepted parameter format and validation rules must be confirmed against the API implementation.
-
-## 4. Example Success Response
-
-**HTTP Status:** `200 OK`
-
-The following JSON is an illustrative response and does not represent verified live sensor data.
+Illustrative HTTP status: `200 OK`
 
 ```json
 {
-  "timestamp": "2026-10-18T02:00:00Z",
-  "pressure_psi": 9850.5,
-  "temperature_f": 185.2,
-  "status": "OPTIMAL"
+  "timestamp": "2026-10-20T10:30:00Z",
+  "rig_id": "RIG-001",
+  "pressure_psi": 1250.5,
+  "temperature_f": 178.4,
+  "status": "normal"
 }
 ```
 
-### 4.1 Response Fields
+### Response fields
 
 | Field | Type | Description |
 |---|---|---|
-| `timestamp` | string | Example timestamp in UTC using ISO 8601 format. |
-| `pressure_psi` | number | Example pressure measurement in pounds per square inch (psi). |
-| `temperature_f` | number | Example temperature measurement in degrees Fahrenheit. |
-| `status` | string | Illustrative status associated with the reading. |
+| `timestamp` | String (date-time) | Example timestamp for the reading, represented in UTC |
+| `rig_id` | String | Identifier associated with the requested rig |
+| `pressure_psi` | Number | Illustrative pressure reading in pounds per square inch |
+| `temperature_f` | Number | Illustrative temperature reading in degrees Fahrenheit |
+| `status` | String | Example status label associated with the telemetry record |
 
-The permitted status values, measurement limits, and response schema must be verified before this example is treated as an implementation contract.
+The example values are fictional and do not represent actual operating conditions or approved alarm thresholds.
 
-## 5. Rate Limits
+## 5. HTTP status codes and error handling
 
-The original portfolio example specifies a limit of 1,000 requests per hour per API key. This limit has not been verified against a running service.
+The following responses illustrate how a real implementation could communicate common request failures.
 
-For a production API, the documentation should explain how clients can identify the request limit, determine when it resets, and respond to rate limiting.
-
-## 6. Error Responses
-
-The following error codes are proposed examples. Actual behavior must be verified against the API implementation.
-
-| HTTP Status | Meaning | Recommended Client Action |
+| Status code | Meaning | Example cause |
 |---|---|---|
-| `400 Bad Request` | A required query parameter is missing or invalid. | Check the request parameters and submit a valid request. |
-| `401 Unauthorized` | The authentication token is missing or invalid. | Check the token and Authorization header. |
-| `429 Too Many Requests` | The request limit has been exceeded. | Reduce the request rate and retry according to the service's documented policy. |
+| `200 OK` | Request succeeded | A telemetry record is returned |
+| `400 Bad Request` | Request is invalid | Required `rig_id` is missing or malformed |
+| `401 Unauthorized` | Authentication failed | Token is missing, invalid, or expired |
+| `429 Too Many Requests` | Rate limit exceeded | Request quota has been exceeded |
 
-## 7. Security Considerations
+### Example error response
 
-- Use HTTPS for API communications.
-- Store API credentials securely.
-- Do not commit real tokens, passwords, or other secrets to a public repository.
-- Follow the API provider's authentication and access-control requirements.
+Illustrative HTTP status: `400 Bad Request`
 
-These are general documentation recommendations and do not confirm that the illustrative API implements these controls.
+```json
+{
+  "error": {
+    "code": "INVALID_REQUEST",
+    "message": "The rig_id query parameter is required."
+  }
+}
+```
 
-## 8. Implementation Notes
+This is a proposed error format for the demonstration. It is not a confirmed response from a live service.
 
-Before this guide is used as production documentation:
+### Troubleshooting guidance
 
-1. Verify the base URL and endpoint against the actual API.
-2. Confirm the authentication mechanism and token requirements.
-3. Validate the query parameters and response schema.
-4. Confirm rate limits and error-response behavior.
-5. Ensure this guide matches the OpenAPI specification.
-6. Have all safety-critical or operational information reviewed by the appropriate subject-matter expert.
+**400 Bad Request**
 
----
+Check that `rig_id` is present, correctly spelled, and supplied as a query parameter.
 
-**Document Status:** Portfolio Demonstration
+**401 Unauthorized**
 
-**Document Version:** 1.0.0
+Check that the `Authorization` header uses the Bearer scheme and that a valid token has been supplied. This example does not issue or validate tokens.
 
-**Last Updated:** 19 October 2026
+**429 Too Many Requests**
+
+Stop sending requests temporarily and follow the retry guidance provided by the actual service, if available. A production API should document whether it provides `Retry-After` and rate-limit headers.
+
+## 6. Rate limits
+
+The previous portfolio example specified a limit of **1,000 requests per hour per API key**.
+
+This figure is illustrative only. It has not been verified against a live service.
+
+A production API should document:
+
+- The applicable quota and its time window
+- Whether limits apply per user, token, or API key
+- The response returned when a quota is exceeded
+- Any rate-limit headers and retry guidance
+
+## 7. Request and response conventions
+
+The example uses these conventions:
+
+- HTTP methods describe the intended operation.
+- Query parameters are used to identify the requested rig.
+- JSON represents example request-independent response data.
+- Bearer authentication is illustrated through an HTTP header.
+- HTTP status codes communicate success or failure.
+
+A production implementation should also define field validation, timestamp guarantees, units, nullability, data freshness, and the meaning of each possible status value.
+
+## 8. Security and operational considerations
+
+Telemetry can inform engineering decisions, so a real implementation requires controls beyond documenting an endpoint.
+
+- Enforce HTTPS and secure credential handling.
+- Authenticate and authorize callers.
+- Validate request parameters.
+- Define monitoring, logging, and error-handling requirements.
+- Document data freshness and measurement units.
+- Establish appropriate access controls and retention policies.
+- Verify all behaviour against the deployed service and approved engineering requirements.
+
+**Important:** This API example is not a control system and must not be used to operate equipment, determine safe operating limits, or replace approved field procedures.
+
+## 9. Related resources
+
+- [Home — Technical Documentation Portfolio](index.md)
+- [Wellhead Documentation](Guide.md)
+- [Technical Guide](Guide2.md)
+
+## 10. Scope and limitations
+
+This reference demonstrates the structure and writing style of an API reference. It does not establish that an API implementation exists.
+
+Before adapting this documentation for a real service, verify the base URL, authentication mechanism, endpoint behaviour, schemas, error responses, rate limits, and security requirements with the service owner and approved technical sources.
