@@ -50,10 +50,10 @@ nav:
   - Technical Guide: Guide2.md
   - API Reference: api-guide.md
 
+copyright: Copyright &copy; 2026 Ikechukwu
+
 extra_css:
   - styles/extra.css
-
-copyright: Copyright &copy; 2026 Ikechukwu Okonkwo
 
 extra:
   generator: false
