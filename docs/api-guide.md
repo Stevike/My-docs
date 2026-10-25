@@ -204,13 +204,11 @@ Before adapting this documentation for a real service, verify the base URL, auth
 
 ## OpenAPI Specification Validation
 
-The OpenAPI 3.1.0 specification for this demonstration API
-was validated using an online OpenAPI validator.
+The OpenAPI 3.1.0 specification for this demonstration API was validated using an online OpenAPI validator.
 
-- Validation result: Passed
-- Validation issues reported: None
-- Documented endpoints: 1
-- Scope: Structural validation of an illustrative API specification
+- **Validation result:** Passed
+- **Validation issues reported:** None
+- **Documented endpoints:** 1
+- **Validation scope:** Structural validation of the illustrative API specification
 
-This validation does not confirm the availability or operation
-of a live API service.
+This validation does not confirm the availability or operation of a live API service.
