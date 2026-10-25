@@ -54,3 +54,6 @@ extra_css:
   - styles/extra.css
 
 copyright: Copyright &copy; 2026 Ikechukwu Okonkwo
+
+extra:
+  generator: false
