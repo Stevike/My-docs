@@ -106,7 +106,7 @@ Illustrative HTTP status: `200 OK`
 | `rig_id` | String | Identifier associated with the requested rig |
 | `pressure_psi` | Number | Illustrative pressure reading in pounds per square inch |
 | `temperature_f` | Number | Illustrative temperature reading in degrees Fahrenheit |
-| `status` | String | Example status label associated with the telemetry record |
+| `status` | String (enum) | Illustrative status label. Possible example values are `normal`, `warning`, and `unknown`; these are not safety decisions or approved alarm thresholds. |
 
 The example values are fictional and do not represent actual operating conditions or approved alarm thresholds.
 
