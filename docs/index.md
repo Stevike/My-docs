@@ -1,16 +1,18 @@
-
 # Ikechukwu Okonkwo
 
 ## Technical Writer | Engineering Documentation | API Documentation
 
-I create clear, structured, and maintainable technical documentation that helps readers understand equipment, systems, procedures, and software interfaces.
+I turn complex technical information into clear, accurate, and user-focused documentation.
 
-With a professional background in oil and gas engineering and wellhead services, I bring practical technical knowledge to documentation involving equipment operation, installation, testing, commissioning, troubleshooting, and safety systems.
+With hands-on experience in oil and gas engineering and wellhead services, I understand the importance of technical accuracy, structured procedures, equipment documentation, troubleshooting guidance, and safety-conscious communication.
 
-I am building my technical writing portfolio around documentation-as-code, structured content, and API documentation, with an interest in remote opportunities where technical accuracy, clarity, and organization matter.
+I combine this engineering background with practical documentation-as-code skills using Markdown, MkDocs, GitHub, and OpenAPI to create organized, maintainable technical content.
 
-[Explore My Documentation](Guide.md){ .md-button .md-button--primary }
+**Areas of focus:** Engineering documentation · Technical procedures · Equipment guides · API documentation · Documentation-as-code
+
+[Explore Wellhead Documentation](Guide.md){ .md-button .md-button--primary }
 [View API Reference](api-guide.md){ .md-button }
+[Connect on LinkedIn](https://www.linkedin.com/in/ikechukwu-okonkwo-a5a643185){ .md-button }
 
 ---
 
@@ -81,7 +83,7 @@ A technical writing sample focused on presenting engineering information in an o
 
 ## Professional Background
 
-My engineering experience in oil and gas provides context for documenting wellhead equipment, instrumentation, safety systems, installation activities, testing, and commissioning.
+My engineering experience in oil and gas provides practical context for documenting wellhead equipment, instrumentation, safety systems, installation activities, testing, and commissioning.
 
 I apply this experience to technical communication while continuing to develop my software documentation and API writing skills.
 
@@ -90,7 +92,7 @@ I apply this experience to technical communication while continuing to develop m
 - **Portfolio:** [stevike.github.io/My-docs](https://stevike.github.io/My-docs/)
 - **GitHub:** [github.com/Stevike/My-docs](https://github.com/Stevike/My-docs)
 - **LinkedIn:** [Ikechukwu Okonkwo](https://www.linkedin.com/in/ikechukwu-okonkwo-a5a643185)
-- **Email:** stevikepet@yahoo.com
+- **Email:** [stevikepet@yahoo.com](mailto:stevikepet@yahoo.com)
 
 I welcome opportunities to contribute to technical writing, engineering documentation, API documentation, and documentation-as-code projects.
 
