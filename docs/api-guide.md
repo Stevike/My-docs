@@ -1,4 +1,3 @@
-
 # Wellhead Telemetry API Reference
 
 This reference documents an illustrative REST API for retrieving wellhead telemetry data. It demonstrates API documentation practices for endpoint definitions, authentication, request parameters, JSON responses, error handling, and rate limits.
@@ -25,7 +24,7 @@ The example API represents a service that provides telemetry readings associated
 
 ## 2. Base URL
 
-The reserved `.invalid` domain below is used to prevent the example from being mistaken for a live service.
+The reserved `.invalid` domain is used to prevent the example from being mistaken for a live service.
 
 ```text
 https://api.example.invalid
@@ -47,7 +46,7 @@ The example uses a Bearer token in the HTTP `Authorization` header.
 Authorization: Bearer YOUR_EXAMPLE_TOKEN
 ```
 
-`YOUR_EXAMPLE_TOKEN` is a placeholder, not a working credential. No token issuance or validation service is provided by this portfolio example.
+`YOUR_EXAMPLE_TOKEN` is a placeholder, not a working credential. This portfolio example does not provide a token issuance or validation service.
 
 ### Authentication requirements
 
@@ -58,11 +57,15 @@ Authorization: Bearer YOUR_EXAMPLE_TOKEN
 
 An unauthenticated or invalidly authenticated request is illustrated as returning `401 Unauthorized`.
 
-## 4. Retrieve telemetry
+## 4. Retrieve Telemetry
 
 Returns an illustrative telemetry record for the requested rig.
 
 ### `GET /v1/sensors/telemetry`
+
+**Purpose:** Retrieve an example telemetry record associated with a specified rig.
+
+**Authentication:** Bearer token, as described in Section 3.
 
 ### Request parameters
 
@@ -107,7 +110,7 @@ Illustrative HTTP status: `200 OK`
 
 The example values are fictional and do not represent actual operating conditions or approved alarm thresholds.
 
-## 5. HTTP status codes and error handling
+## 5. HTTP Status Codes and Error Handling
 
 The following responses illustrate how a real implementation could communicate common request failures.
 
@@ -145,13 +148,13 @@ Check that the `Authorization` header uses the Bearer scheme and that a valid to
 
 **429 Too Many Requests**
 
-Stop sending requests temporarily and follow the retry guidance provided by the actual service, if available. A production API should document whether it provides `Retry-After` and rate-limit headers.
+Stop sending requests temporarily and follow the retry guidance provided by the actual service, if available. A production API should document whether it provides a `Retry-After` header and rate-limit headers.
 
-## 6. Rate limits
+## 6. Rate Limits
 
-The previous portfolio example specified a limit of **1,000 requests per hour per API key**.
+Rate limits define how many requests a client may make within a specified period.
 
-This figure is illustrative only. It has not been verified against a live service.
+This example does not establish a verified rate limit. Any quota documented for a real implementation must be confirmed with the service owner.
 
 A production API should document:
 
@@ -160,19 +163,19 @@ A production API should document:
 - The response returned when a quota is exceeded
 - Any rate-limit headers and retry guidance
 
-## 7. Request and response conventions
+## 7. Request and Response Conventions
 
-The example uses these conventions:
+The example uses the following conventions:
 
 - HTTP methods describe the intended operation.
-- Query parameters are used to identify the requested rig.
-- JSON represents example request-independent response data.
+- Query parameters identify the requested rig.
+- JSON represents the example response payload.
 - Bearer authentication is illustrated through an HTTP header.
 - HTTP status codes communicate success or failure.
 
 A production implementation should also define field validation, timestamp guarantees, units, nullability, data freshness, and the meaning of each possible status value.
 
-## 8. Security and operational considerations
+## 8. Security and Operational Considerations
 
 Telemetry can inform engineering decisions, so a real implementation requires controls beyond documenting an endpoint.
 
@@ -186,13 +189,13 @@ Telemetry can inform engineering decisions, so a real implementation requires co
 
 **Important:** This API example is not a control system and must not be used to operate equipment, determine safe operating limits, or replace approved field procedures.
 
-## 9. Related resources
+## 9. Related Resources
 
 - [Home — Technical Documentation Portfolio](index.md)
 - [Wellhead Documentation](Guide.md)
 - [Technical Guide](Guide2.md)
 
-## 10. Scope and limitations
+## 10. Scope and Limitations
 
 This reference demonstrates the structure and writing style of an API reference. It does not establish that an API implementation exists.
 
