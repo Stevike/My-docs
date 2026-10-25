@@ -200,3 +200,17 @@ Telemetry can inform engineering decisions, so a real implementation requires co
 This reference demonstrates the structure and writing style of an API reference. It does not establish that an API implementation exists.
 
 Before adapting this documentation for a real service, verify the base URL, authentication mechanism, endpoint behaviour, schemas, error responses, rate limits, and security requirements with the service owner and approved technical sources.
+
+
+## OpenAPI Specification Validation
+
+The OpenAPI 3.1.0 specification for this demonstration API
+was validated using an online OpenAPI validator.
+
+- Validation result: Passed
+- Validation issues reported: None
+- Documented endpoints: 1
+- Scope: Structural validation of an illustrative API specification
+
+This validation does not confirm the availability or operation
+of a live API service.
