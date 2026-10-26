@@ -36,6 +36,7 @@ A technical documentation sample demonstrating how complex engineering activitie
 An illustrative API documentation project demonstrating how developers can understand endpoints, authentication concepts, request parameters, JSON responses, and error handling.
 
 **Documentation features:**
+
 - Endpoint descriptions and request examples
 - Parameters and response structures
 - Authentication concepts
