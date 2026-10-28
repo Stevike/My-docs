@@ -8,9 +8,7 @@ With hands-on experience in oil and gas engineering and wellhead services, I und
 
 I combine this engineering background with practical documentation-as-code skills using Markdown, MkDocs, GitHub, and OpenAPI to create organized, maintainable technical content.
 
-**Areas of focus:** 
-
-Engineering documentation · Technical procedures · Equipment guides · API documentation · Documentation-as-code
+**Areas of focus:** Engineering documentation · Technical procedures · Equipment guides · API documentation · Documentation-as-code
 
 [Explore Wellhead Documentation](Guide.md){ .md-button .md-button--primary }
 [View API Reference](api-guide.md){ .md-button }
