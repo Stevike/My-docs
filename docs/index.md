@@ -22,8 +22,7 @@ I combine this engineering background with practical documentation-as-code skill
 
 A technical documentation sample demonstrating how complex engineering activities can be organized into a clear, structured guide.
 
-**Topics covered:**
-
+**Topics covered:**    
 - Installation preparation and equipment requirements
 - Safety considerations and work planning
 - Installation steps and verification
