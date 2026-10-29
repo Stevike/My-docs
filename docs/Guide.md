@@ -1,4 +1,4 @@
-# Wellhead Installation Procedure — API 10K Multi-Bowl System
+# Wellhead Installation Documentation — 10,000 psi Multi-Bowl Wellhead System
 
 > **Portfolio sample — illustrative documentation only.** This document demonstrates technical writing structure and documentation practices. It is not an approved field procedure. Installation activities, connection methods, pressure-test requirements, and acceptance criteria must be verified against the exact equipment manufacturer's instructions, approved well program, and applicable site procedures before use.
 
@@ -6,11 +6,11 @@
 
 | Field | Details |
 |---|---|
-| Document Title | Wellhead Installation Procedure — API 10K Multi-Bowl System |
+| Document Title | Illustrative; not approved for field execution |
 | Document ID | SOP-OPS-WH-10K-001 |
 | Version | 2.0 — Portfolio Sample |
 | Effective Date | October 2026 |
-| Equipment Reference | Cameron Specialty Multi-Bowl System (MN-S), as specified in the source draft |
+| Equipment Reference | Illustrative multi-bowl wellhead system; exact manufacturer and model to be verified against approved equipment documentation |
 | Author | Ikechukwu Okonkwo — Portfolio Documentation Sample |
 | Document Status | Illustrative; not approved for field execution |
 
@@ -224,7 +224,7 @@ Before this document is adapted for operational use, identify and verify the app
 
 - Manufacturer's installation, operation, and maintenance instructions for the exact wellhead model
 - Approved well program and casing design
-- Applicable API 6A equipment requirements and relevant API 10K designation or project specification
+- Applicable API Specification 6A requirements, including the relevant edition and addenda, and the project-specific pressure-rating and equipment requirements, where applicable.
 - Approved connection, welding, inspection, and NDT procedures, where applicable
 - Approved pressure-testing procedure and acceptance criteria
 - Site HSE requirements, lifting plan, and Permit to Work documentation
