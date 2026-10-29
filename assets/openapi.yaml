@@ -1,0 +1,164 @@
+openapi: 3.1.0
+
+info:
+  title: Wellhead Telemetry API
+  version: 1.0.0
+  summary: Illustrative API for wellhead telemetry data.
+  description: |
+    A portfolio demonstration of a REST API for retrieving wellhead telemetry.
+
+    This specification describes an illustrative interface only. No live API
+    service, authentication provider, or telemetry backend is verified.
+    All examples are fictional and must not be used for operational decisions.
+  contact:
+    name: Documentation Portfolio
+    url: https://stevike.github.io/My-docs/
+
+servers:
+  - url: https://api.example.invalid
+    description: Reserved example host; not a live API server.
+
+tags:
+  - name: Telemetry
+    description: Example operations for retrieving wellhead telemetry.
+
+paths:
+  /v1/sensors/telemetry:
+    get:
+      tags:
+        - Telemetry
+      operationId: getWellheadTelemetry
+      summary: Retrieve telemetry for a rig
+      description: |
+        Returns an illustrative telemetry record for the specified rig.
+        This operation is documented for demonstration purposes only.
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: rig_id
+          in: query
+          required: true
+          description: Identifier of the rig whose telemetry is requested.
+          schema:
+            type: string
+            minLength: 1
+          example: RIG-001
+      responses:
+        "200":
+          description: Telemetry record returned successfully.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TelemetryResponse"
+              example:
+                timestamp: "2026-10-20T10:30:00Z"
+                rig_id: RIG-001
+                pressure_psi: 1250.5
+                temperature_f: 178.4
+                status: normal
+
+        "400":
+          description: The request is missing a required parameter or is invalid.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error:
+                  code: INVALID_REQUEST
+                  message: The rig_id query parameter is required.
+
+        "401":
+          description: Authentication is missing or invalid.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error:
+                  code: UNAUTHORIZED
+                  message: A valid bearer token is required.
+
+        "429":
+          description: The illustrative request quota has been exceeded.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ErrorResponse"
+              example:
+                error:
+                  code: RATE_LIMIT_EXCEEDED
+                  message: The request quota has been exceeded.
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: ExampleToken
+      description: |
+        Illustrative bearer-token authentication. No real token issuer or
+        authentication service is provided.
+
+  schemas:
+    TelemetryResponse:
+      type: object
+      required:
+        - timestamp
+        - rig_id
+        - pressure_psi
+        - temperature_f
+        - status
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+          description: Example timestamp in UTC.
+          example: "2026-10-20T10:30:00Z"
+
+        rig_id:
+          type: string
+          description: Identifier of the requested rig.
+          example: RIG-001
+
+        pressure_psi:
+          type: number
+          description: Illustrative pressure in pounds per square inch.
+          example: 1250.5
+
+        temperature_f:
+          type: number
+          description: Illustrative temperature in degrees Fahrenheit.
+          example: 178.4
+
+        status:
+          type: string
+          description: |
+            Illustrative telemetry status label. These values are examples
+            only and must not be interpreted as alarm thresholds or safety
+            decisions.
+          enum:
+            - normal
+            - warning
+            - unknown
+          example: normal
+
+    ErrorResponse:
+      type: object
+      required:
+        - error
+      properties:
+        error:
+          type: object
+          required:
+            - code
+            - message
+          properties:
+            code:
+              type: string
+              description: Machine-readable error identifier.
+              example: INVALID_REQUEST
+            message:
+              type: string
+              description: Human-readable explanation of the error.
+              example: The rig_id query parameter is required.
