@@ -6,6 +6,16 @@ This guide demonstrates how technical troubleshooting information can be organiz
 
 It uses a general industrial equipment example to demonstrate technical writing practices. It is not a substitute for equipment-specific troubleshooting instructions or an approved maintenance procedure.
 
+## Document Information
+
+| Field | Details |
+|---|---|
+| Document Title | Technical Troubleshooting and Maintenance Documentation Guide |
+| Document Type | Illustrative technical writing sample |
+| Author | Ikechukwu Okonkwo |
+| Version | 1.0 |
+| Document Status | Portfolio sample; not an approved operational procedure |
+
 ## 2. Purpose
 
 The purpose of this guide is to demonstrate a consistent approach to technical troubleshooting by helping readers:
