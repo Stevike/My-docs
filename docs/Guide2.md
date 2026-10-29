@@ -1,4 +1,4 @@
-# Technical Troubleshooting and Maintenance Guide
+# Technical Troubleshooting and Maintenance Documentation Guide
 
 ## 1. Introduction
 
@@ -72,7 +72,7 @@ Confirm that the documentation applies to the actual equipment model and configu
 
 Develop a list of potential causes based on the observed symptoms and available evidence.
 
-| Observed Symptom | Possible Cause to Investigate | Information to Review |
+| Observed Symptom | Potential Cause | Information to Review |
 |---|---|---|
 | Equipment does not start | Power supply, control signal, interlock, or mechanical issue | Electrical drawings, alarm history, and approved start-up procedure |
 | Instrument reading is unstable | Sensor issue, loose connection, interference, or changing process conditions | Instrument specification, signal records, and calibration history |
@@ -80,7 +80,7 @@ Develop a list of potential causes based on the observed symptoms and available 
 | Reduced equipment performance | Operating conditions, wear, blockage, or control issue | Performance history, inspection records, and manufacturer guidance |
 | Visible leakage | Seal, fitting, connection, or component damage | Equipment drawings, inspection history, and approved isolation procedure |
 
-These are possible causes, not confirmed diagnoses. The actual cause must be established through appropriate inspection and testing.
+these causes are not confirmed diagnoses. The actual cause must be established through appropriate inspection and testing.
 
 ### Step 4: Investigate and Record Findings
 
